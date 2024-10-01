@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Diferentes Etiquetas en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+     
+
+        section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+            .profile img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            nav ul li {
+                display: inline;
+                margin: 0 10px;
+            }
+
+        .multimedia-content {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Uso de Diferentes Etiquetas en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#estructura"> Etiquetas de Estructura</a></li>
+                <li><a href="#texto">Etiquetas de Texto</a></li>
+                <li><a href="#multimedia">Etiquetas de Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <img src="Imagenes/Avatar.JPG">
+            <h2>Jackcing Alexander Moreno Ramírez</h2>
+        </section>
+
+        <section id="estructura">
+            <h2>Noticias Recientes</h2>
+            <article>
+                <h3>Innovaciones en Tecnología</h3>
+                <p>El avance tecnológico sigue sorprendiéndonos. Este año se han desarrollado nuevas herramientas que prometen revolucionar la industria del software.</p>
+                <footer>
+                    <p>Publicado el 16 de septiembre de 2024 por <strong>Juan Pérez</strong></p>
+                </footer>
+            </article>
+            <aside>
+                <h3>Contenido Lateral</h3>
+                <p>Esta es la barra lateral donde puedes incluir enlaces o información adicional.</p>
+            </aside>
+        </section>
+
+        <section id="texto">
+            <h2>Etiquetas de Formato de Texto</h2>
+            <p>Este es un texto en <b>negrita</b> y este es un texto en <i>cursiva</i>.</p>
+            <p>Este es un texto con <strong>énfasis fuerte</strong> y este es un texto <em>enfatizado</em>.</p>
+            <p>Este es un texto <mark>marcado</mark> y este es un texto <small>pequeño</small>.</p>
+            <p>Este es un texto <del>eliminado</del> y este es un texto <ins>insertado</ins>.</p>
+            <p>Este es un texto <sub>subíndice</sub> y este es un texto <sup>superíndice</sup>.</p>
+        </section>
+
+        <section id="listas">
+            <h2>Etiquetas de Listas</h2>
+            <h3>Lista no Ordenada</h3>
+            <ul>
+                <li>Objeto 2 </li>
+                <li>Objeto 3</li>
+                <li>Objeto 1</li>
+            </ul>
+            <h3>Lista Ordenada</h3>
+            <ol>
+                <li>Objeto 1</li>
+                <li>Objeto 2</li>
+                <li>Objeto 3</li>
+            </ol>
+            <h3>Lista de Descripción</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado utilizado para estructurar contenido en la web.</dd>
+                <dt>API</dt>
+                <dd>Interfaz de programación de aplicaciones que permite a diferentes programas comunicarse entre sí.</dd>
+                <dt>CSS</dt>
+                <dd>Lenguaje de estilo utilizado para describir la presentación de un documento HTML.</dd>
+                <dt>JavaScript</dt>
+                <dd>Lenguaje de programación que permite agregar interactividad a los sitios web.</dd>
+            </dl>
+        </section>
+
+        <section id="multimedia">
+            <h2>Etiquetas Multimedia</h2>
+            <h3>Imagen</h3>
+            <section class="Imagenes">
+                <img src="Imagenes/New York.jpg">
+
+            
+            <h3>Audio</h3>
+            <audio controls autoplay>
+                <source src="Audio/CinematicAudio.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+              </audio>
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="Video/Don Toliver - No Idea [Official Music Video].mp4" type="video/mp4">
+                
+              Your browser does not support the video tag.
+              </video>
+            <h3>Contenido Incrustado</h3>
+            <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </section>
+
+        <section id="semantico">
+            <h2>Etiquetas Semánticas</h2>
+            <details>
+                <summary>Haz clic para ver más información</summary>
+                <p>Este es un contenido oculto que se puede expandir.</p>
+            </details>
+            <p>La hora es <time datetime="2024-09-16T20:00:00">20:00</time></p>
+            <p>La fórmula química del agua es H<sub>2</sub>O</p>
+            <p>El área de un círculo es πr<sup>2</sup></p>
+        </section>
+
+        <section id="canvas-svg">
+            <h2>Canvas y SVG</h2>
+            <h3>Canvas</h3>
+            <canvas id="miCanvas" width="200" height="100" style="border:1px solid #000000;">
+                Tu navegador no soporta el elemento canvas de HTML.
+            </canvas>
+            <script>
+                var c = document.getElementById("miCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(0, 0, 150, 75);
+            </script>
+            <h3>SVG</h3>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jackcing Alexander Moreno Ramírez. Todos los derechos reservados.</p>
+        <address>
+            Contacto: <a href="mailto:Alex200425mr@outlook.es">Alex200425mr@outlook.es</a>
+        </address>
+    </footer>
+</body>
+</html>
